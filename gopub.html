@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <title>gopub — 代码发布系统</title>
+
+    <!-- Styles -->
+    <link href="assets/css/page.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+    <link rel="icon" href="assets/img/favicon.png">
+  </head>
+
+  <body>
+
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light navbar-stick-dark" data-navbar="smart">
+      <div class="container">
+
+        <div class="navbar-left mr-4">
+          <button class="navbar-toggler" type="button">&#9776;</button>
+          <a class="navbar-brand" href="#">
+            <img class="logo-dark" src="assets/img/logo/github.png" alt="logo">
+            <img class="logo-light" src="assets/img/logo/github-light.png" alt="logo">
+          </a>
+        </div>
+
+        <section class="navbar-mobile">
+          <nav class="nav nav-navbar mr-auto">
+            <a class="nav-link active" href="#home">主页</a>
+            <a class="nav-link" href="#section-features">配置项目</a>
+            <a class="nav-link" href="#section-pricing">上线使用</a>
+            <a class="nav-link" href="#section-config">配置文件</a>
+            <a class="nav-link" href="#section-down">下载使用</a>
+          </nav>
+
+        </section>
+
+      </div>
+    </nav><!-- /.navbar -->
+
+
+    <!-- Header -->
+    <header id="home" class="header text-white h-fullscreen text-center text-lg-left" style="background-color: #24292e">
+      <canvas class="constellation" data-color="rgba(255,255,255,0.3)"></canvas>
+      <div class="container">
+        <div class="row align-items-center h-100">
+
+          <div class="col-lg-6">
+            <h1>Gopub - 代码自动发布系统</h1>
+            <p class="lead mt-5 mb-8">只要文件列表，即可完成繁琐的代码备份和自动发布，摆脱手工执行，防止疲劳错误。</p>
+            <p class="gap-xy">
+              <a class="btn btn-round btn-outline-light mw-150" href="http://demo.golangpub.com" target="_blank">demo</a>
+              <a class="btn btn-round btn-outline-light mw-150" href="https://github.com/adventurer/gopub" target="_blank">github</a>
+
+            </p>
+          </div>
+
+          <div class="col-lg-5 ml-auto">
+            <img class="mt-5" src="assets/img/preview/laptop-1.png" alt="img">
+          </div>
+
+        </div>
+      </div>
+    </header><!-- /.header -->
+
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+      <!--
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      | Welcome
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      !-->
+      <section class="section">
+        <div class="container">
+          <header class="section-header">
+            <h2>发布界面预览</h2>
+            <hr>
+            <p class="lead">可审批，日志清晰，一键式自动发布</p>
+          </header>
+
+
+
+          <div class="row gap-y">
+
+            <div class="col-md-8 mx-auto">
+              <img src="assets/img/site/show.png" alt="..." data-aos="fade-up" data-aos-duration="2000">
+            </div>
+
+
+            <div class="w-100"></div>
+
+
+            <div class="col-md-6 col-xl-4">
+              <div class="media">
+                <div class="lead-6 line-height-1 text-dark mr-5"><i class="icon-mobile"></i></div>
+                <div class="media-body">
+                  <h5>响应式布局</h5>
+                  <p>手机端和pc端均可操作</p>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-md-6 col-xl-4">
+              <div class="media">
+                <div class="lead-6 line-height-1 text-primary mr-5"><i class="icon-gears"></i></div>
+                <div class="media-body">
+                  <h5>自定义发布</h5>
+                  <p>可设置发布后任务，平滑重启服务器，执行自定义命令或脚本等</p>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-md-6 col-xl-4">
+              <div class="media">
+                <div class="lead-6 line-height-1 text-info mr-5"><i class="icon-tools"></i></div>
+                <div class="media-body">
+                  <h5>配置方便</h5>
+                  <p>每项目只需一次配置，即可持续使用</p>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-md-6 col-xl-4">
+              <div class="media">
+                <div class="lead-6 line-height-1 text-warning mr-5"><i class="icon-layers"></i></div>
+                <div class="media-body">
+                  <h5>安全</h5>
+                  <p>程序只会删除本地和远程的.zip文件，不会对其他文件进行删除操作</p>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-md-6 col-xl-4">
+              <div class="media">
+                <div class="lead-6 line-height-1 text-danger mr-5"><i class="icon-recycle"></i></div>
+                <div class="media-body">
+                  <h5>开源</h5>
+                  <p>使用git托管源代码，可任意进行修改</p>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-md-6 col-xl-4">
+              <div class="media">
+                <div class="lead-6 line-height-1 text-success mr-5"><i class="icon-chat"></i></div>
+                <div class="media-body">
+                  <h5>支持</h5>
+                  <p>作者会不定期对软件进行维护和更新，并保持其升级兼容性</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+
+      <!--
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      | CTA
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      !-->
+      
+
+
+      <!--
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      | Features
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      !-->
+      <section id="section-features" class="section bg-gray">
+        <div class="container">
+          <header class="section-header">
+            <small>项目配置</small>
+            <h2>所有配置都有提示</h2>
+            <hr>
+
+          </header>
+
+
+          <div class="row gap-y align-items-center">
+            <div class="col-md-12 ml-auto">
+              <h4>注意事项</h4>
+              <p><code>基本配置：软件部署机器需要能够ssh免密码登陆发布目标机器，这是本项目可以运作的根本原因。</code></p>
+              <p>本地仓库路径：需以<code>repos/</code>开头，因为从仓库检出的代码存在在<code>repos</code>目录下。</p>
+              <p>发布用户：必须是可面密码登陆代码发布目标机器的用户，并且用户主目录下存在id_rsa文件。请使用命令<code>ls $HOME/.ssh/</code>检查</p>
+              <p>机器列表：支持多机发布，格式需严格遵守。以,分隔每台机器。以:分隔ip和端口。端口号即使是22也必须填写。</p>
+              <p>发布后任务：每行一条命令，会在发布结束后逐行执行。</p>
+              <p>测试链接按钮：当发布用户和机器列表填写后就可以进行ssh连通测试，确保填写了正确的发布用户和目标机器地址。</p>
+              <p>git版本：需要执行<code>git clone -q git仓库地址 目标目录</code>命令，所以请使用大于v2.0.0以上的git客户端版本，目前测试centos7为1.7.*版本，所以请重新安装git客户端。<a href="https://git-scm.com/book/zh/v1/%E8%B5%B7%E6%AD%A5-%E5%AE%89%E8%A3%85-Git" target="_blank">附上git客户端安装教程</a></p>
+              <p>最后，请保证具有git仓库的检出权限</p>
+            </div>
+
+            
+          </div>
+
+
+
+
+          
+
+
+        </div>
+      </section>
+
+
+      <!--
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      | Pricing
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      !-->
+      <section id="section-pricing" class="section">
+        <div class="container">
+          <header class="section-header">
+            <small>上线使用</small>
+            <h2>发布过程清晰</h2>
+            <hr>
+          </header>
+
+          <div class="row gap-y text-center">
+
+            <div class="col-md-12">
+              <img src="assets/img/site/task.gif" alt="..." data-aos="fade-up" data-aos-duration="2000">
+              
+            </div>
+
+          </div>
+
+
+        </div>
+      </section>
+
+
+      <!--
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      | Signup
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      !-->
+      <section id="section-config" class="section bg-gray text-center">
+        <div class="container">
+
+          <header class="section-header">
+            <small>最后一步</small>
+            <p class="lead">配置数据库和项目监听端口,在项目根目录找到配置文件<code>config.json</code></p>
+          </header>
+
+
+          <div class="row">
+            <code>
+              {
+                "Listen": ":8088",
+                "DBIp":   "127.0.0.1",
+                "DBPort": "3306",
+                "DBUser": "root",
+                "DBPass": "password",
+                "DBName": "gopub",
+                "SqlLog": true
+              }
+            </code>
+          </div>
+
+        </div>
+      </section>
+
+      <section id="section-down" class="section bg-gray text-center">
+        <div class="container">
+
+          <header class="section-header">
+            <small>下载使用</small>
+            <a href="https://github.com/adventurer/gopub/releases/download/v1.0.0/gopub_windows.zip" target="_blank"><p class="lead">windows版本</p></a>
+            <a href="https://github.com/adventurer/gopub/releases/download/v1.0.0/gopub_macos.zip" target="_blank"><p class="lead">linux版本</p></a>
+            <a href="https://github.com/adventurer/gopub/releases/download/v1.0.0/gopub_linux.zip" target="_blank"><p class="lead">macos版本</p></a>
+            <a href="https://github.com/adventurer/gopub/archive/v1.0.0.zip" target="_blank"><p class="lead">未编译版本</p></a>
+          </header>
+
+        </div>
+      </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row gap-y align-items-center">
+
+          <div class="col-md-3 text-center text-md-left">
+            <a href="#"><img src="assets/img/logo/github.png" alt="logo"></a>
+          </div>
+
+          <div class="col-md-6">
+            <div class="nav nav-center">
+              <a class="nav-link" href="#">About</a>
+              <a class="nav-link" href="#">Blog</a>
+              <a class="nav-link" href="#">Policy</a>
+              <a class="nav-link" href="#">Contact</a>
+            </div>
+          </div>
+
+          <div class="col-md-3 text-center text-md-right">
+            <small>© 2018. All rights reserved.</small>
+          </div>
+
+        </div>
+      </div>
+    </footer><!-- /.footer -->
+
+
+    <!-- Scripts -->
+    <script src="assets/js/page.min.js"></script>
+    <script src="assets/js/script.js"></script>
+
+  </body>
+</html>
